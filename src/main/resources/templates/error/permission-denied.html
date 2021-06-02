@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Permission Denied</title>
+<link rel="stylesheet" type="text/css" media="all"  
+	href="../static/css/mycss.css" th:href="@{/css/mycss.css}"/>
+<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+	<h1>Permission Denied!</h1>
+	<p><a href="/" th:href="@{/}">Back to home page</a></p>
+	<p><a href="#" th:href="@{/logout}">Logout</a></p>
+</body>
+</html>

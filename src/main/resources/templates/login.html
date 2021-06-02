@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dans Design Login Page</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+<link th:rel="stylesheet"
+	th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} " />
+</head>
+<body>
+
+	<section class="form my-4 mx-5">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-lg-5">
+					<img src="../static/images/my_image.JPG" class="img-fluid"
+						th:src="@{/images/my_image.JPG}"/>
+				</div>
+				<div class="col-lg-7 px-5 pt-5">
+					<img src="../static/images/my_image.JPG" class="img-fluid py-3"
+						th:src="@{/images/logo.png}"/>
+					<h4>Please enter account information</h4>
+					<form method="POST" th:action="@{/login}">
+						<div th:if="${param.error}">
+							<div class="error">Invalid username or password</div>
+						</div>
+						<div th:if="${param.logout}">
+							<div class="error">You have been logged out</div>
+						</div>
+						
+						<div class= "form-row">
+							<div class="col-lg-7">
+								<input type="email" name="username" placeholder="Email Address" class="form-control my-3 p-4"/>
+							</div>
+						</div>
+						<div class= "form-row">
+							<div class="col-lg-7">
+								<input type="password" name="password" placeholder="*****" class="form-control my-3 p-4"/>
+							</div>
+						</div>
+						<div class= "form-row">
+							<div class="col-lg-7">
+								<input type="submit" name="login-submit" value="Login" class="btn1 mt-3 mb-5"/>
+							</div>
+						</div>
+						<p><a href="/" th:href="@{/}">Return Home</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
+
+
+
+
+
+
+
